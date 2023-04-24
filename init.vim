@@ -8,7 +8,7 @@ call plug#end()
 scriptencoding utf-8
 set encoding=utf-8
 set fileencoding=utf-8
-language en_US.utf8
+language en_US
 
 set background=dark
 let g:gruvbox_contrast_dark = 'hard'
