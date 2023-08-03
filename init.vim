@@ -67,8 +67,8 @@ map <Leader>p "+p
 map <Leader>P "+P
 
 " Split window
-nmap <silent> ss :split<Return><C-w>w
-nmap <silent> sv :vsplit<Return><C-w>w
+nmap <silent> ss :split<Return>
+nmap <silent> sv :vsplit<Return>
 
 " Move window
 nmap <Space> <C-w>w
