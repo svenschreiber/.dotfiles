@@ -60,6 +60,13 @@ set termguicolors
 map <C-h> gT
 map <C-l> gt
 
+" Move text around
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+
+" Replace selection without yank
+xmap <Leader>r "_dP
+
 " Shortcuts for copy/paste clipboard
 map <Leader>y "+y
 map <Leader>Y "+Y
@@ -71,11 +78,6 @@ nmap <silent> ss :split<Return>
 nmap <silent> sv :vsplit<Return>
 
 " Move window
-nmap <Space> <C-w>w
-map s<left> <C-w>h
-map s<up> <C-w>k
-map s<down> <C-w>j
-map s<right> <C-w>l
 map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
