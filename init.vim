@@ -42,6 +42,7 @@ set scrolloff=10
 set ignorecase
 set breakindent
 set wrap
+set mouse=a
 
 :set backspace=indent,eol,start
 set path+=**
