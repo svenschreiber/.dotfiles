@@ -30,7 +30,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set hlsearch
-set number
+set relativenumber
 set title
 set showcmd
 set cmdheight=1
