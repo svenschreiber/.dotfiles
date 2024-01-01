@@ -43,6 +43,7 @@ set ignorecase
 set breakindent
 set wrap
 set mouse=a
+set nofixeol
 
 :set backspace=indent,eol,start
 set path+=**
