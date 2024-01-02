@@ -2,6 +2,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'https://tpope.io/vim/commentary.git'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 
 call plug#end()
 
@@ -90,3 +92,6 @@ nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+
+nmap <Leader>ff <cmd>Telescope find_files<cr>
+nmap <Leader>fg <cmd>Telescope live_grep<cr>
