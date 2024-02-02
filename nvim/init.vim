@@ -4,13 +4,13 @@ Plug 'morhetz/gruvbox'
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 
 scriptencoding utf-8
 set encoding=utf-8
 set fileencoding=utf-8
-language en_US
 
 set background=dark
 let g:gruvbox_contrast_dark = 'hard'
