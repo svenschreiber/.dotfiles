@@ -22,7 +22,7 @@ vim.opt.title = true
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.scrolloff = 10
@@ -39,6 +39,8 @@ vim.opt.hidden = true
 vim.opt.wildmenu = true
 vim.opt.wildoptions = 'pum'
 vim.opt.undofile = true
+vim.opt.termguicolors = true
+vim.opt.guicursor = [[n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175]]
 
 -- [[ Keymaps ]]
 
@@ -126,59 +128,36 @@ require("lazy").setup({
             contrast = 'hard',
         },
         init = function()
-            vim.opt.background = 'dark'
-            vim.cmd.colorscheme 'gruvbox'
+            -- vim.opt.background = 'dark'
+            -- vim.cmd.colorscheme 'gruvbox'
         end
     },
 
     { 
         'rebelot/kanagawa.nvim',
         lazy = false,
-        priority = 900,
+        priority = 1000,
         config = function()
-            require('kanagawa').setup{}
-            -- vim.cmd("colorscheme kanagawa")
+            require('kanagawa').setup{
+                keywordStyle = { italic = false },
+                commentStyle = { italic = false },
+            }
+            vim.cmd("colorscheme kanagawa")
         end
     },
 
     {
         "rose-pine/neovim",
         name = "rose-pine",
-        priority = 800,
+        priority = 1000,
         config = function()
             require('rose-pine').setup({
                 disable_background = true,
-                dim_inactive_windows = true,
                 styles = {
                     italic = false,
                 },
             })
             -- vim.cmd("colorscheme rose-pine")
-        end
-    },
-
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
-
-    {
-        "askfiy/visual_studio_code",
-        priority = 100,
-        config = function()
-            -- vim.cmd([[colorscheme visual_studio_code]])
-        end,
-    },
-
-    {
-        "Mofiqul/adwaita.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            -- vim.g.adwaita_darker = true
-            vim.cmd("colorscheme adwaita")
         end
     },
 
