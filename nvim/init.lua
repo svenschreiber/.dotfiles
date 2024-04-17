@@ -59,6 +59,8 @@ vim.keymap.set('n', '<leader>Y', '\"+Y')
 vim.keymap.set('n', '<leader>p', '\"+p')
 vim.keymap.set('n', '<leader>P', '\"+P')
 
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
     local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -80,6 +82,7 @@ require("lazy").setup({
             auto_install = true,
             highlight = {
                 enable = true,
+                -- disable = true,
             },
             indent = { 
                 enable = true, 
@@ -150,7 +153,7 @@ require("lazy").setup({
                     italic = false,
                 },
             })
-            vim.cmd("colorscheme rose-pine")
+            -- vim.cmd("colorscheme rose-pine")
         end
     },
 
@@ -167,6 +170,16 @@ require("lazy").setup({
         config = function()
             -- vim.cmd([[colorscheme visual_studio_code]])
         end,
+    },
+
+    {
+        "Mofiqul/adwaita.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            -- vim.g.adwaita_darker = true
+            vim.cmd("colorscheme adwaita")
+        end
     },
 
 })
