@@ -53,13 +53,13 @@ vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
 
 -- Replace selection without yank
-vim.keymap.set('x', '<leader>r', '\"_dP')
+vim.keymap.set('x', '<leader>r', '"_dP')
 
 -- Shortcuts for copy/paste clipboard
-vim.keymap.set('n', '<leader>y', '\"+y')
-vim.keymap.set('n', '<leader>Y', '\"+Y')
-vim.keymap.set('n', '<leader>p', '\"+p')
-vim.keymap.set('n', '<leader>P', '\"+P')
+vim.keymap.set('', '<leader>y', '"+y')
+vim.keymap.set('', '<leader>Y', '"+Y')
+vim.keymap.set('', '<leader>p', '"+p')
+vim.keymap.set('', '<leader>P', '"+P')
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
