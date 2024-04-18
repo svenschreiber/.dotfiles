@@ -41,6 +41,7 @@ vim.opt.wildoptions = 'pum'
 vim.opt.undofile = true
 vim.opt.termguicolors = true
 vim.opt.guicursor = [[n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175]]
+vim.opt.mouse = 'a'
 
 -- [[ Keymaps ]]
 
@@ -142,7 +143,7 @@ require("lazy").setup({
                 keywordStyle = { italic = false },
                 commentStyle = { italic = false },
             }
-            vim.cmd("colorscheme kanagawa")
+            -- vim.cmd("colorscheme kanagawa")
         end
     },
 
@@ -152,12 +153,12 @@ require("lazy").setup({
         priority = 1000,
         config = function()
             require('rose-pine').setup({
-                disable_background = true,
                 styles = {
                     italic = false,
+                    transparency = true,
                 },
             })
-            -- vim.cmd("colorscheme rose-pine")
+            vim.cmd("colorscheme rose-pine")
         end
     },
 
