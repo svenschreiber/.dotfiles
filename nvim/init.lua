@@ -40,7 +40,7 @@ vim.opt.wildmenu = true
 vim.opt.wildoptions = 'pum'
 vim.opt.undofile = true
 vim.opt.termguicolors = true
-vim.opt.guicursor = [[n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175]]
+-- vim.opt.guicursor = [[n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175]]
 vim.opt.mouse = 'a'
 
 -- [[ Keymaps ]]
@@ -64,6 +64,8 @@ vim.keymap.set('', '<leader>P', '"+P')
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.filetype.add({extension = {vs = "glsl", fs = "glsl"}})
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
     local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -81,7 +83,7 @@ require("lazy").setup({
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
         opts = {
-            ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+            ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'glsl'},
             auto_install = true,
             highlight = {
                 enable = true,
@@ -163,4 +165,3 @@ require("lazy").setup({
     },
 
 })
-
